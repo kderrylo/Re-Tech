@@ -7,7 +7,6 @@ import {
     NavbarContent,
     NavbarItem,
     NavbarMenu,
-    NavbarMenuToggle,
     NavbarMenuItem
 } from "@nextui-org/react";
 import Link from 'next/link'
