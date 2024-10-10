@@ -3,7 +3,7 @@ import localFont from "next/font/local";
 import "./globals.css";
 import { NextUIProvider } from "@nextui-org/react";
 import NavigationBar from "@/app/ui/navigation/navigation-bar";
-import { Footer } from "@/app/ui/homepage/footer";
+import { Footer } from "@/app/ui/footer";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
