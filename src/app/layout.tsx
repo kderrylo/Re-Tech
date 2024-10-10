@@ -2,7 +2,8 @@ import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
 import { NextUIProvider } from "@nextui-org/react";
-import NavigationBar from "./ui/navigation/navigation-bar";
+import NavigationBar from "@/app/ui/navigation/navigation-bar";
+import { Footer } from "@/app/ui/homepage/footer";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -34,6 +35,7 @@ export default function RootLayout({
         <NextUIProvider>
           {children}
         </NextUIProvider>
+        <Footer />
       </body>
     </html>
   );

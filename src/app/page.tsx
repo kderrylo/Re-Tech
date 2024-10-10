@@ -8,7 +8,6 @@ export default function Home() {
     <div className="bg-navbar text-light">
       <Hero />
       <About/>
-      <Footer />
     </div>
   );
 }
