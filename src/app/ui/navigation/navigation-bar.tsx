@@ -1,14 +1,6 @@
 'use client';
-import {
-    Navbar,
-    NavbarBrand,
-    NavbarContent,
-    NavbarItem,
-    NavbarMenu,
-    NavbarMenuItem,
-    NavbarMenuToggle,
-    Link
-} from "@nextui-org/react";
+
+import { Navbar, NavbarBrand, NavbarContent, NavbarMenu, NavbarMenuToggle, Link } from "@nextui-org/react";
 import { NavLinks } from "@/app/ui/navigation/nav-links";
 import { NavMenuLinks } from "@/app/ui/navigation/nav-menu-links";
 import Image from "next/image";
@@ -101,7 +93,10 @@ export default function NavigationBar() {
             onMenuOpenChange={setIsMenuOpen}
         >
             <NavbarContent>
-                <NavbarBrand as={Link} href="/">
+                <NavbarBrand 
+                    as={Link} 
+                    href="/"
+                >
                     <div className="flex flex-shrink-0 flex-row items-center gap-2 ">
                         <div className="__navbar-logo-image__ relative w-10 h-10 lg:w-16 lg:h-16 transition-all">
                             <Image src="/logo.png" alt="Logo" fill sizes="4rem" priority />
@@ -116,7 +111,7 @@ export default function NavigationBar() {
 					className="sm:hidden text-white"
 				/>
             </NavbarContent>
-            <NavbarContent className="hidden sm:flex gap-4" justify="center">
+            <NavbarContent className="hidden sm:flex gap-10" justify="center">
 				{menuItems.map((item, index) => (
 					<NavLinks 
 						key={ `${item.name}-${index}` }
@@ -125,7 +120,7 @@ export default function NavigationBar() {
 					/>
 				))}
 			</NavbarContent>
-            <NavbarMenu>
+            <NavbarMenu className="mt-4">
 				{menuItems.map((item, index) => (
 					<NavMenuLinks 
 						key={`${item.name}-${index}`} 
