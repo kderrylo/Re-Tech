@@ -1,5 +1,7 @@
-import aboutImg from "../../../public/bg-about.jpg";
-import Image from "next/image";
+// import aboutImg from "../../../public/bg-about.jpg";
+"use client";
+
+import { Image } from "@nextui-org/react";
 
 export const About = () => {
     return (
@@ -9,7 +11,7 @@ export const About = () => {
 
                 <div className='min-h-[400px] flex justify-center items-center mx-10'>
                     <div className="hw-56 md:w-64 lg:w-96 m-auto md:m-0 border-4 border-gray-300 shadow-lg flex justify-center items-center mx-10">
-                        <Image src={aboutImg} alt="aboutImg" className="object-contain " />
+                        <Image src="/bg-about.jpg" alt="aboutImg" className="object-contain rounded-none" />
                     </div>
                 </div>
 

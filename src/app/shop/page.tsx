@@ -3,7 +3,7 @@
 import { useState, useEffect } from "react";
 import Image from 'next/image'; 
 import Navbar from "../ui/navigation/navigation-bar";
-import { Footer } from "../components/footer";
+import { Footer } from "../ui/homepage/footer";
 
 interface Item {
     id: number;
