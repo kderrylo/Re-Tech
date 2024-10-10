@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, ChangeEvent, FormEvent } from 'react';
+import { useState, ChangeEvent} from 'react';
 import Navbar from "../components/navbar";
 import { Footer } from "../components/footer";
 
@@ -14,7 +14,7 @@ interface FormData {
     action: string,
     message: string,
     additionalInfo: string,
-    photos: File[] // Menyimpan foto
+    photos: File[] 
 }
 
 export default function KontakPage() {
@@ -28,10 +28,9 @@ export default function KontakPage() {
         action: '',
         message: '',
         additionalInfo: '',
-        photos: [] // Inisialisasi array kosong untuk foto
+        photos: [] 
     });
 
-    // Handle changes for non-file inputs
     const handleChange = (e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
         setFormData({
             ...formData,
@@ -39,12 +38,11 @@ export default function KontakPage() {
         });
     };
 
-    // Handle file uploads
     const handlePhotoUpload = (e: ChangeEvent<HTMLInputElement>) => {
         if (e.target.files) {
             setFormData({
                 ...formData,
-                photos: Array.from(e.target.files) // Convert FileList to Array
+                photos: Array.from(e.target.files) 
             });
         }
     };
