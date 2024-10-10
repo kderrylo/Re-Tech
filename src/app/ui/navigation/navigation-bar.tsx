@@ -108,10 +108,10 @@ export default function NavigationBar() {
                 </NavbarBrand>
                 <NavbarMenuToggle
 					aria-label={isMenuOpen ? "Close menu" : "Open menu"}
-					className="sm:hidden text-white"
+					className="md:hidden text-white"
 				/>
             </NavbarContent>
-            <NavbarContent className="hidden sm:flex gap-10" justify="center">
+            <NavbarContent className="hidden md:flex gap-10" justify="center">
 				{menuItems.map((item, index) => (
 					<NavLinks 
 						key={ `${item.name}-${index}` }
