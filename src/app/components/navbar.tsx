@@ -1,7 +1,5 @@
 'use client';
 import {
-    Accordion,
-    AccordionItem,
     Navbar,
     NavbarBrand,
     NavbarContent,
@@ -11,7 +9,7 @@ import {
 } from "@nextui-org/react";
 import Link from 'next/link';
 import Image from "next/image";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 
 const deleteClass = (className: string, attr: string) => {
     return className.replace(attr, "")
