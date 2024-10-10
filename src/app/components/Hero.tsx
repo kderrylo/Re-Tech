@@ -7,7 +7,7 @@ export const Hero = () => {
                         <div className='flex flex-col gap-4'>
                             <h1 className='text-1xl lg:text-2xl text-neutral-white text-center'>We Accept Your Tech in Any Condition</h1>
                             <div>
-                                <h2 className='text-4xl lg:text-5xl font-black text-neutral-white text-center'>Reduce, Resell, <span className="text-accent">Re-Tech</span></h2>
+                                <h2 className='text-4xl lg:text-5xl font-black text-neutral-white text-center'>Reduce, Resell, <span className="text-accent">ReTech</span></h2>
                             </div>
                         </div>
                     </div>

@@ -16,9 +16,9 @@ export const About = () => {
 
                 <div className='p-8 flex flex-col text-black justify-center items-center '>
                     <p>
-                        At Re-Tech, we believe in giving a second life to electronic devices, no matter their condition. Our mission is to provide a sustainable solution for electronic waste by accepting and responsibly processing tech items that are no longer in use. Whether your devices are fully functional or broken, we are here to help you recycle, reuse, and reimagine the value of your tech.
+                        At ReTech, we believe in giving a second life to electronic devices, no matter their condition. Our mission is to provide a sustainable solution for electronic waste by accepting and responsibly processing tech items that are no longer in use. Whether your devices are fully functional or broken, we are here to help you recycle, reuse, and reimagine the value of your tech.
                         <br /><br />
-                        Our team of experts carefully dismantles and evaluates each device, ensuring that usable parts are repurposed and sold, while non-functional components are processed in an environmentally friendly manner. By choosing Re-Tech, you&apos;re not just disposing of your old electronics, you&apos;re contributing to a cleaner planet and reducing the impact of e-waste on our environment.
+                        Our team of experts carefully dismantles and evaluates each device, ensuring that usable parts are repurposed and sold, while non-functional components are processed in an environmentally friendly manner. By choosing ReTech, you&apos;re not just disposing of your old electronics, you&apos;re contributing to a cleaner planet and reducing the impact of e-waste on our environment.
                         <br /><br />
                         Join us in our commitment to sustainability, and let&apos;s work together to create a greener future—one device at a time.
                     </p>

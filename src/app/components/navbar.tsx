@@ -94,7 +94,7 @@ const MyNavbar = () => {
                             <Image src="/logo.png" alt="Logo" fill sizes="4rem" priority />
                         </div>
                         <div>
-                            <p id="logo-text2" className='text-4xl ml-4 font-semibold text-light lg:text-neutral-white __navbar-text__ transition-colors'>Re-Tech</p>
+                            <p id="logo-text2" className='text-4xl ml-4 font-semibold text-light lg:text-neutral-white __navbar-text__ transition-colors'>ReTech</p>
                         </div>
                     </div>
                 </NavbarBrand>
