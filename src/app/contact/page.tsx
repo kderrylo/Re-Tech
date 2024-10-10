@@ -157,7 +157,6 @@ export default function KontakPage() {
                     </div>
                 </div>
             </div>
-            <Footer />
         </div>
     )
 }

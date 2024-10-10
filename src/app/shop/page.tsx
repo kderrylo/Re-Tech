@@ -101,7 +101,6 @@ const ShopPage = () => {
                     ))}
                 </div>
             </div>
-            <Footer />
         </div>
     );
 };
