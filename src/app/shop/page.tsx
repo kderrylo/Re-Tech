@@ -62,7 +62,6 @@ const ShopPage = () => {
     const [items, setItems] = useState<Item[]>([]);
 
     useEffect(() => {
-        // Simulasi pengambilan data dari API
         setItems(mockItems);
     }, []);
 
@@ -87,9 +86,9 @@ const ShopPage = () => {
                                 src={item.imageUrl}
                                 alt={item.name}
                                 className="w-full h-48 object-cover"
-                                width={400} // Tentukan lebar gambar
-                                height={200} // Tentukan tinggi gambar
-                                priority // Jika ingin gambar ini dimuat lebih cepat
+                                width={400} 
+                                height={200} 
+                                priority 
                             />
                             <div className="p-4">
                                 <h2 className="text-xl font-semibold">{item.name}</h2>

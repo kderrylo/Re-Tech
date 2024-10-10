@@ -14,7 +14,7 @@ const geistMono = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "Re-Tech",
+  title: "ReTech",
   description: "Electrics Waste Platform",
 };
 
