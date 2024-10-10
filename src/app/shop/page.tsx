@@ -54,7 +54,7 @@ const mockItems: Item[] = [
         name: "Keyboard Mekanik",
         description: "Keyboard Razer BlackWidow, kondisi seperti baru.",
         price: 800000,
-        imageUrl: "/assestsShop/6.jpg",
+        imageUrl: "/assestsShop/6.JPG",
     },
 ];
 
