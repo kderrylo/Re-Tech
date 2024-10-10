@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import Image from 'next/image'; 
 import Navbar from "../components/navbar";
 import { Footer } from "../components/footer";
 
@@ -81,8 +82,15 @@ const ShopPage = () => {
 
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 py-8 gap-6 mx-4">
                     {items.map((item) => (
-                        <div key={item.id} className="bg-light rounded-lg shadow-lg shadow-md overflow-hidden ">
-                            <img src={item.imageUrl} alt={item.name} className="w-full h-48 object-cover" />
+                        <div key={item.id} className="bg-light rounded-lg shadow-lg shadow-md overflow-hidden">
+                            <Image
+                                src={item.imageUrl}
+                                alt={item.name}
+                                className="w-full h-48 object-cover"
+                                width={400} // Tentukan lebar gambar
+                                height={200} // Tentukan tinggi gambar
+                                priority // Jika ingin gambar ini dimuat lebih cepat
+                            />
                             <div className="p-4">
                                 <h2 className="text-xl font-semibold">{item.name}</h2>
                                 <p className="text-gray-600">{item.description}</p>
