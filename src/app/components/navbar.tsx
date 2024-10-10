@@ -29,12 +29,12 @@ const handleScrollChange = (position: number) => {
             item.className = deleteClass(item.className, " text-blue-primary lg:text-neutral-white")
             item.className += " !text-light"
         })
-        if (_navbar?.className.includes(" lg:!bg-neutral-white")) {
+        if (_navbar?.className.includes(" lg:!bg-dark")) {
             return
         }
         imageWrapper.className = deleteClass(imageWrapper.className, " lg:w-16 lg:h-16")
         _navbar.className = deleteClass(_navbar.className, " lg:!bg-transparent")
-        _navbar.className += " lg:!bg-neutral-white lg:!py-0"
+        _navbar.className += " lg:!bg-dark lg:!py-0"
         imageWrapper.className += " lg:w-10 lg:h-10"
         return
     }
@@ -45,8 +45,8 @@ const handleScrollChange = (position: number) => {
                 item.className += " text-blue-primary lg:text-neutral-white"
             }
         })
-        if (_navbar?.className.includes(" lg:!bg-neutral-white")) {
-            _navbar.className = deleteClass(_navbar.className, " lg:!bg-neutral-white lg:!py-0")
+        if (_navbar?.className.includes(" lg:!bg-dark")) {
+            _navbar.className = deleteClass(_navbar.className, " lg:!bg-dark lg:!py-0")
             _navbar.className += " lg:!bg-transparent"
             imageWrapper.className = deleteClass(imageWrapper.className, " lg:w-10 lg:h-10")
             imageWrapper.className += " lg:w-16 lg:h-16"
@@ -59,7 +59,7 @@ const MyNavbar = () => {
 
     return (
         <Navbar id="navbar"  classNames={{
-            base: ["fixed", "bg-dark", "border-b", "py-2", "lg:py-4", "transition-all", "shadow-md", "text-accent"]
+            base: ["fixed", "lg:bg-transparent" ,"bg-dark", "border-b", "py-2", "lg:py-4", "transition-all", "shadow-md", "text-accent"]
         }}
             disableScrollHandler={false}
             onScrollPositionChange={(yPos) => handleScrollChange(yPos)}
@@ -67,7 +67,7 @@ const MyNavbar = () => {
             isMenuOpen={isMenuOpen}
             onMenuOpenChange={() => setMenuOpen(!isMenuOpen)}
         >
-            <div className="w-full flex justify-between items-center py-3">
+            <div className="w-full flex justify-between items-center py-2">
 
 
                 <NavbarBrand as={Link} href="/">
@@ -91,14 +91,14 @@ const MyNavbar = () => {
                     </NavbarItem>
                     <NavbarItem className="hidden lg:block">
                         <Link
-                            href="/"
+                            href="/shop"
                             className='__navbar-text__ text-sm md:text-base text-light font-medium transition-colors'>
                             SHOP
                         </Link>
                     </NavbarItem>
                     <NavbarItem className="hidden lg:block">
                         <Link
-                            href="/"
+                            href="/contact"
                             className='__navbar-text__ text-sm md:text-base text-light font-medium transition-colors'>
                             CONTACT US
                         </Link>
