@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, ChangeEvent} from 'react';
-import Navbar from "../components/navbar";
+import Navbar from "../ui/navigation/navigation-bar";
 import { Footer } from "../components/footer";
 
 interface FormData {
@@ -54,7 +54,6 @@ export default function KontakPage() {
 
     return (
         <div>
-            <Navbar />
             <div className='w-full shadow-lg text-dark'>
                 <div className='w-full h-[50vh] bg-[url("/bg-contact.png")] bg-cover bg-center flex justify-center items-end shadow-lg'>
                     <div className='w-3/4 max-w-[1024px] h-3/5 flex flex-col items-center gap-20 landscape:gap-0 landscape:justify-between'>
