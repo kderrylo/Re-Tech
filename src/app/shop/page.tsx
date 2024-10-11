@@ -69,7 +69,9 @@ const ShopPage = () => {
                     </div>
                 </div>
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 py-8 gap-6 mx-4">
-                    <ProductItem items={mockItems} />
+                    {mockItems.map((item) => (
+                        <ProductItem item={item} />
+                    ))}
                 </div>
             </div>
         </div>
