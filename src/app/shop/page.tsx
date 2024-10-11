@@ -63,7 +63,10 @@ export default function ShopPage() {
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 py-8 gap-6 mx-4">
                 {mockItems.map((item) => (
-                    <ProductItem item={item} />
+                    <ProductItem 
+                        key={item.id}
+                        item={item} 
+                    />
                 ))}
             </div>
         </div>

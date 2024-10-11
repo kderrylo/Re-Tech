@@ -1,8 +1,6 @@
 "use client";
 
 import { useState, ChangeEvent} from 'react';
-import Navbar from "../ui/navigation/navigation-bar";
-import { Footer } from "../ui/footer";
 
 interface FormData {
     name: string,
