@@ -6,6 +6,26 @@ import { NavMenuLinks } from "@/app/ui/navigation/nav-menu-links";
 import Image from "next/image";
 import { useState } from "react";
 
+interface NavItemProps {
+    name: string;
+    path: string;
+}
+
+const navItems: NavItemProps[] = [
+    {
+        name: 'HOME',
+        path: '/',
+    },
+    {
+        name: 'SHOP',
+        path: '/shop'
+    },
+    {
+        name: 'CONTACT',
+        path: '/contact'
+    },
+];
+
 const deleteClass = (className: string, attr: string) => {
     return className.replace(attr, "")
 }
@@ -66,21 +86,7 @@ const handleScrollChange = (position: number) => {
 
 export default function NavigationBar() {
     const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false);
-    const menuItems = [
-        {
-			name: 'Home',
-			path: '/',
-		},
-		{
-			name: 'Shop',
-			path: '/shop'
-		},
-		{
-			name: 'Contact',
-			path: '/contact'
-		},
-    ];
-    
+
     return (
         <Navbar
             id="navbar"
@@ -112,7 +118,7 @@ export default function NavigationBar() {
 				/>
             </NavbarContent>
             <NavbarContent className="hidden md:flex gap-10" justify="center">
-				{menuItems.map((item, index) => (
+				{navItems.map((item, index) => (
 					<NavLinks 
 						key={ `${item.name}-${index}` }
 						name={ item.name } 
@@ -121,7 +127,7 @@ export default function NavigationBar() {
 				))}
 			</NavbarContent>
             <NavbarMenu className="mt-4">
-				{menuItems.map((item, index) => (
+				{navItems.map((item, index) => (
 					<NavMenuLinks 
 						key={`${item.name}-${index}`} 
 						name={ item.name }
