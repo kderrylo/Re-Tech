@@ -2,7 +2,7 @@
 
 import { useState, ChangeEvent} from 'react';
 import Navbar from "../ui/navigation/navigation-bar";
-import { Footer } from "../components/footer";
+import { Footer } from "../ui/footer";
 
 interface FormData {
     name: string,
@@ -157,7 +157,6 @@ export default function KontakPage() {
                     </div>
                 </div>
             </div>
-            <Footer />
         </div>
     )
 }
