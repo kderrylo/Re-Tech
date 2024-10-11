@@ -4,7 +4,7 @@ import { Image } from "@nextui-org/react";
 
 export const About = () => {
     return (
-        <div className="flex flex-col gap-8 px-8 justify-center items-center min-h-screen">
+        <div className="flex flex-col mb-10 gap-8 px-8 justify-center items-center min-h-screen">
             <h3 className="text-dark font-bold text-4xl text-center">About Us</h3>
             <div className="grid md:flex justify-center items-center gap-8">
                 <div className="w-full flex justify-center items-center">
