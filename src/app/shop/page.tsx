@@ -55,7 +55,7 @@ const mockItems: Item[] = [
     },
 ];
 
-const ShopPage = () => {
+export default function ShopPage() {
     return (
         <div>
             <div className="w-full h-[50vh] bg-[url('/bg-shop.png')] bg-cover bg-center flex justify-center items-center shadow-lg">
@@ -69,5 +69,3 @@ const ShopPage = () => {
         </div>
     );
 };
-
-export default ShopPage;
