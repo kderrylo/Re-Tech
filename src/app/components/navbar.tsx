@@ -81,7 +81,7 @@ const MyNavbar = () => {
         <Navbar
             id="navbar"
             classNames={{
-                base: ["fixed", "lg:bg-transparent", "bg-dark", "border-b", "py-2", "lg:py-4", "transition-all", "shadow-md", "text-accent", "z-50"]
+                base: ["fixed ", "lg:bg-transparent", "bg-dark", "border-b", "py-2", "lg:py-4", "transition-all", "shadow-md", "text-accent", "z-50"]
             }}
             disableScrollHandler={false}
             onScrollPositionChange={(yPos) => handleScrollChange(yPos)}
