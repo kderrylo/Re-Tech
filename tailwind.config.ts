@@ -12,6 +12,7 @@ const config: Config = {
         background: "var(--background)",
         foreground: "var(--foreground)",
         dark:"#103731",
+        dark_:"#526E48",
         accent:"#628B35",
         light:"#E2DBD0"
         
