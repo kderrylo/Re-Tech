@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 import Image from 'next/image'; 
 import Navbar from "../components/navbar";
 import { Footer } from "../components/footer";
+import Link from "next/link";
 
 interface Item {
     id: number;
@@ -13,56 +14,17 @@ interface Item {
     imageUrl: string;
 }
 
-const mockItems: Item[] = [
-    {
-        id: 1,
-        name: "Laptop Bekas",
-        description: "Laptop Dell dengan spesifikasi baik.",
-        price: 3000000,
-        imageUrl: "/assestsShop/1.jpg",
-    },
-    {
-        id: 2,
-        name: "Smartphone Bekas",
-        description: "Smartphone Samsung Galaxy A30 dalam kondisi baik.",
-        price: 1500000,
-        imageUrl: "/assestsShop/2.jpg",
-    },
-    {
-        id: 3,
-        name: "Monitor 24 inch Bekas",
-        description: "Monitor LG 24 inch, resolusi tinggi.",
-        price: 1200000,
-        imageUrl: "/assestsShop/3.jpg",
-    },
-    {
-        id: 4,
-        name: "Kamera DSLR Bekas",
-        description: "Kamera Canon EOS 1300D, lengkap dengan lensa.",
-        price: 4500000,
-        imageUrl: "/assestsShop/4.jpg",
-    },
-    {
-        id: 5,
-        name: "Headphone Bluetooth Bekas",
-        description: "Headphone Sony WH-1000XM3, noise-canceling.",
-        price: 2000000,
-        imageUrl: "/assestsShop/5.jpg",
-    },
-    {
-        id: 6,
-        name: "Keyboard Mekanik",
-        description: "Keyboard Razer BlackWidow, kondisi seperti baru.",
-        price: 800000,
-        imageUrl: "/assestsShop/6.JPG",
-    },
-];
 
 const ShopPage = () => {
     const [items, setItems] = useState<Item[]>([]);
 
     useEffect(() => {
-        setItems(mockItems);
+        const fetchItem = async () => {
+            const response = await fetch('api/products');
+            const data = await response.json();
+            setItems(data);
+        };
+        fetchItem();
     }, []);
 
     return (
@@ -91,12 +53,15 @@ const ShopPage = () => {
                                 priority 
                             />
                             <div className="p-4">
+                                
                                 <h2 className="text-xl font-semibold">{item.name}</h2>
                                 <p className="text-gray-600">{item.description}</p>
                                 <p className="text-lg font-bold mt-2">Rp{item.price.toLocaleString()}</p>
-                                <button className="mt-4 w-full bg-dark text-white py-2 rounded-lg hover:bg-accent">
-                                    Beli Sekarang
-                                </button>
+                                <Link href={`/products/${item.id}`}>
+                                    <button className="mt-4 w-full bg-dark text-white py-2 rounded-lg hover:bg-accent">
+                                        View Product
+                                    </button>
+                                </Link>
                             </div>
                         </div>
                     ))}
