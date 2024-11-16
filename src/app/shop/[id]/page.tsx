@@ -15,7 +15,11 @@ async function fetchProduct(id: string) {
   return product;
 }
 
-export default async function ProductPage({ params }: { params: { id: string } }) {
+export default async function ProductPage({
+  params,
+}: {
+  params: { id: string };
+}) {
   const product = await fetchProduct(params.id);
 
   if (!product) return notFound();
