@@ -26,76 +26,13 @@ const navItems: NavItemProps[] = [
     },
 ];
 
-const deleteClass = (className: string, attr: string) => {
-    return className.replace(attr, "")
-}
-
-const handleScrollChange = (position: number) => {
-    const _navbar: HTMLElement | null = document.getElementById("navbar");
-    const imageWrapper: HTMLElement | null = document.querySelector(".__navbar-logo-image__");
-    const navbarText: NodeListOf<Element> = document.querySelectorAll(".__navbar-text__");
-
-    if (position > 100) {
-        navbarText.forEach((item) => {
-            if (item.className.includes(" !text-dark")) {
-                return;
-            }
-            item.className = deleteClass(item.className, " text-blue-primary lg:text-neutral-white");
-            item.className += " !text-light";
-        });
-
-        if (_navbar?.className.includes(" lg:!bg-dark")) {
-            return;
-        }
-
-        if (imageWrapper) {
-            imageWrapper.className = deleteClass(imageWrapper.className, " lg:w-16 lg:h-16");
-        }
-
-        if (_navbar) {
-            _navbar.className = deleteClass(_navbar.className, " lg:!bg-transparent");
-            _navbar.className += " lg:!bg-dark lg:!py-0";
-        }
-
-        if (imageWrapper) {
-            imageWrapper.className += " lg:w-10 lg:h-10";
-        }
-
-        return;
-    } else {
-        navbarText.forEach((item) => {
-            if (item.className.includes(" !text-blue-primary")) {
-                item.className = deleteClass(item.className, " !text-blue-primary");
-                item.className += " text-blue-primary lg:text-neutral-white";
-            }
-        });
-
-        if (_navbar?.className.includes(" lg:!bg-dark")) {
-            if (_navbar) {
-                _navbar.className = deleteClass(_navbar.className, " lg:!bg-dark lg:!py-0");
-                _navbar.className += " lg:!bg-transparent";
-            }
-
-            if (imageWrapper) {
-                imageWrapper.className = deleteClass(imageWrapper.className, " lg:w-10 lg:h-10");
-                imageWrapper.className += " lg:w-16 lg:h-16";
-            }
-        }
-    }
-}
-
 export default function NavigationBar() {
     const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false);
 
     return (
         <Navbar
             id="navbar"
-            classNames={{
-                base: ["fixed", "lg:bg-transparent", "bg-dark", "border-b", "py-2", "lg:py-4", "transition-all", "shadow-md", "text-accent", "z-50"]
-            }}
-            disableScrollHandler={false}
-            onScrollPositionChange={(yPos) => handleScrollChange(yPos)}
-            isBlurred={false}
+            className="fixed lg:bg-transparent bg-dark border-b py-2 lg:py-4 transition-all shadow-md text-accent z-50"
             onMenuOpenChange={setIsMenuOpen}
         >
             <NavbarContent>
@@ -126,7 +63,7 @@ export default function NavigationBar() {
 					/>
 				))}
 			</NavbarContent>
-            <NavbarMenu className="mt-4">
+            <NavbarMenu className="mt-4 bg-white">
 				{navItems.map((item, index) => (
 					<NavMenuLinks 
 						key={`${item.name}-${index}`} 
