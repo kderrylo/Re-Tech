@@ -1,7 +1,6 @@
-
 import Link from "next/link";
 
-import {SiX, SiInstagram, SiTiktok} from "react-icons/si";
+import { SiX, SiInstagram, SiTiktok } from "react-icons/si";
 // import {TbMail} from "react-icons/tb";
 // import {GoLocation, GoOrganization} from "react-icons/go";
 
@@ -13,9 +12,7 @@ export const Footer = () => {
     >
       <div className="w-5/6 md:max-w-[100rem] flex flex-col gap-8">
         <div className="flex flex-col gap-4">
-          <h1 className="text-accent font-bold text-5xl md:text-7xl">
-            ReTech
-          </h1>
+          <h1 className="text-accent font-bold text-5xl md:text-7xl">ReTech</h1>
         </div>
         <div className="flex flex-col gap-2">
           <div className="flex flex-row gap-10">
@@ -33,10 +30,10 @@ export const Footer = () => {
           <div className="flex flex-row gap-2 items-center">
             {/* <TbMail color="#6BE7F1" /> */}
             <p className="text-light text-xs sm:text-base">
-                retechentre@gmail.com
+              retechentre@gmail.com
             </p>
             <p className="text-light text-xs sm:text-base">
-                (+62) 0822-9987-9929
+              (+62) 0822-9987-9929
             </p>
           </div>
         </div>
