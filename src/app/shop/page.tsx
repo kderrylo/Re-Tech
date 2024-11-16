@@ -1,54 +1,24 @@
-"use client";
-
+import { notFound } from "next/navigation";
 import { ProductItem } from "@/app/ui/shop/product-item";
 import { ProductsProps } from "@/app/interface/shop";
 
-const mockItems: ProductsProps[] = [
-  {
-    id: 1,
-    name: "Laptop Bekas",
-    description: "Laptop Dell dengan spesifikasi baik.",
-    price: 3000000,
-    imageUrl: "/assestsShop/1.jpg",
-  },
-  {
-    id: 2,
-    name: "Smartphone Bekas",
-    description: "Smartphone Samsung Galaxy A30 dalam kondisi baik.",
-    price: 1500000,
-    imageUrl: "/assestsShop/2.jpg",
-  },
-  {
-    id: 3,
-    name: "Monitor 24 inch Bekas",
-    description: "Monitor LG 24 inch, resolusi tinggi.",
-    price: 1200000,
-    imageUrl: "/assestsShop/3.jpg",
-  },
-  {
-    id: 4,
-    name: "Kamera DSLR Bekas",
-    description: "Kamera Canon EOS 1300D, lengkap dengan lensa.",
-    price: 4500000,
-    imageUrl: "/assestsShop/4.jpg",
-  },
-  {
-    id: 5,
-    name: "Headphone Bluetooth Bekas",
-    description: "Headphone Sony WH-1000XM3, noise-canceling.",
-    price: 2000000,
-    imageUrl: "/assestsShop/5.jpg",
-  },
-  {
-    id: 6,
-    name: "Keyboard Mekanik",
-    description: "Keyboard Razer BlackWidow, kondisi seperti baru.",
-    price: 800000,
-    imageUrl: "/assestsShop/6.JPG",
-  },
-];
+async function fetchProducts() {
+  const url = process.env.NEXT_APP_URL;
+  const response = await fetch(`${url}/api/products`);
 
-export default function ShopPage() {
+  if (!response.ok) {
+    throw new Error("Fetch Failed!");
+  }
+
+  const products: ProductsProps[] = await response.json();
+  return products;
+}
+
+export default async function ShopPage() {
+  const products = await fetchProducts();
+
+  if (!products) return notFound();
+
   return (
     <div>
       <div className="w-full h-[50vh] bg-[url('/bg-shop.png')] bg-cover bg-center flex justify-center items-center shadow-lg">
@@ -57,7 +27,7 @@ export default function ShopPage() {
         </h2>
       </div>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 py-8 gap-6 mx-4">
-        {mockItems.map((item) => (
+        {products.map((item) => (
           <ProductItem key={item.id} item={item} />
         ))}
       </div>

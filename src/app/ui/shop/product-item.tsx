@@ -1,6 +1,7 @@
 import { Button } from "@nextui-org/react";
 import { Card, CardBody, CardFooter, Image } from "@nextui-org/react";
 import { ProductItemProps } from "@/app/interface/shop";
+import Link from "next/link";
 
 export const ProductItem: React.FC<ProductItemProps> = ({ item }) => {
   return (
@@ -22,12 +23,14 @@ export const ProductItem: React.FC<ProductItemProps> = ({ item }) => {
             <p className="text-gray-600">{item.description}</p>
           </div>
           <p className="font-bold text-lg">Rp {item.price.toLocaleString()}</p>
-          <Button
-            size="md"
-            className="w-full rounded-md bg-dark text-white hover:bg-accent"
-          >
-            Beli Sekarang
-          </Button>
+          <Link href={`/shop/${item.id}`}>
+            <Button
+              size="md"
+              className="w-full rounded-md bg-dark text-white hover:bg-accent"
+            >
+              Beli Sekarang
+            </Button>
+          </Link>
         </CardFooter>
       </Card>
     </>
