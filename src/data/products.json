@@ -1,0 +1,50 @@
+[
+  {
+    "id": 1,
+    "name": "Laptop Dell Bekas",
+    "description": "Laptop Dell dengan spesifikasi baik.",
+    "subDescription": "Laptop Dell bekas ini siap mendukung berbagai kebutuhan komputasi Anda, mulai dari pekerjaan kantor hingga keperluan kuliah. Dibekali dengan spesifikasi yang mumpuni, laptop ini memiliki prosesor yang masih kuat dan memori yang cukup besar, sehingga mampu menangani multitasking dengan baik tanpa mengalami penurunan performa yang signifikan. Spesifikasi utama: Prosesor yang memadai untuk kegiatan sehari-hari Kondisi fisik baik dengan layar jernih Cocok untuk pengguna yang mencari laptop andal tanpa menguras kantong.",
+    "price": 3000000,
+    "imageUrl": "/assestsShop/1.jpg"
+  },
+  {
+    "id": 2,
+    "name": "Smartphone Samsung Galaxy A30 Bekas",
+    "description": "Smartphone Samsung Galaxy A30 dalam kondisi baik.",
+    "subDescription": "Samsung Galaxy A30 ini dalam kondisi sangat baik, siap untuk digunakan kembali. Dikenal dengan layar Super AMOLED yang tajam dan baterai yang tahan lama, smartphone ini ideal bagi pengguna yang membutuhkan ponsel dengan performa cukup mumpuni tanpa harus membeli yang baru. Detail produk: Layar Super AMOLED yang memberikan warna cerah dan tajam Baterai tahan lama, cocok untuk aktivitas harian Kondisi keseluruhan masih baik, hanya ada sedikit tanda pemakaian.",
+    "price": 1500000,
+    "imageUrl": "/assestsShop/2.jpg"
+  },
+  {
+    "id": 3,
+    "name": "Monitor LG 24 inch Bekas",
+    "description": "Monitor LG 24 inch, resolusi tinggi.",
+    "subDescription": "Monitor LG 24 inch bekas ini sangat cocok untuk keperluan produktivitas atau hiburan. Dengan resolusi tinggi dan ukuran yang pas untuk ruang kerja atau gaming, monitor ini menghadirkan tampilan visual yang jelas dan warna yang tajam. Fitur unggulan: Resolusi tinggi yang mendukung detail gambar yang tajam Ukuran 24 inch ideal untuk multitasking Desain ramping, menambah estetika ruang kerja Anda.",
+    "price": 1200000,
+    "imageUrl": "/assestsShop/3.jpg"
+  },
+  {
+    "id": 4,
+    "name": "Kamera Canon EOS 1300D DSLR Bekas",
+    "description": "Kamera Canon EOS 1300D, lengkap dengan lensa.",
+    "subDescription": "Canon EOS 1300D ini adalah pilihan tepat bagi pemula maupun penggemar fotografi yang ingin mengembangkan kemampuan fotografi mereka. Dijual lengkap dengan lensa, kamera ini menawarkan pengalaman foto yang memuaskan dengan kualitas gambar yang tajam dan warna yang kaya. Informasi produk: Termasuk lensa, siap pakai untuk berbagai kebutuhan fotografi Kualitas gambar tinggi, ideal untuk dokumentasi atau proyek kreatif Dalam kondisi terawat dengan fungsi yang masih optimal.",
+    "price": 4500000,
+    "imageUrl": "/assestsShop/4.jpg"
+  },
+  {
+    "id": 5,
+    "name": "Headphone Sony WH-1000XM3 Bluetooth Bekas",
+    "description": "Headphone Sony WH-1000XM3, noise-canceling.",
+    "subDescription": "Sony WH-1000XM3 ini adalah headphone berkualitas dengan teknologi noise-canceling yang unggul, cocok bagi Anda yang sering bekerja atau menikmati musik tanpa gangguan. Headphone ini dirancang untuk kenyamanan jangka panjang dengan kualitas suara yang jernih dan bass yang mendalam. Keunggulan produk: Teknologi noise-canceling terbaik di kelasnya Nyaman digunakan dengan desain ergonomis Kualitas suara jernih dan koneksi Bluetooth yang stabil.",
+    "price": 2000000,
+    "imageUrl": "/assestsShop/5.jpg"
+  },
+  {
+    "id": 6,
+    "name": "Keyboard Razer BlackWidow Mekanik",
+    "description": "Keyboard Razer BlackWidow, kondisi seperti baru.",
+    "subDescription": "Razer BlackWidow ini menawarkan pengalaman mengetik yang memuaskan dengan respons tombol mekaniknya yang khas. Dalam kondisi hampir seperti baru, keyboard ini ideal bagi gamers atau pekerja kreatif yang membutuhkan keyboard yang tahan lama dan responsif. Highlight: Respons tombol mekanik yang cepat dan nyaman Kondisi fisik seperti baru, sangat terawat Cocok untuk gaming atau produktivitas dengan kualitas Razer yang terkenal.",
+    "price": 800000,
+    "imageUrl": "/assestsShop/6.JPG"
+  }
+]
