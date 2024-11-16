@@ -20,17 +20,19 @@ export default async function ShopPage() {
   if (!products) return notFound();
 
   return (
-    <div>
-      <div className="w-full h-[50vh] bg-[url('/bg-shop.png')] bg-cover bg-center flex justify-center items-center shadow-lg">
-        <h2 className="text-4xl lg:text-5xl font-black text-light text-center">
-          Shop
-        </h2>
+    <>
+      <div>
+        <div className="w-full h-[50vh] bg-[url('/bg-shop.png')] bg-cover bg-center flex justify-center items-center shadow-lg">
+          <h2 className="text-4xl lg:text-5xl font-black text-light text-center">
+            Shop
+          </h2>
+        </div>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 py-8 gap-6 mx-4">
+          {products.map((item) => (
+            <ProductItem key={item.id} item={item} />
+          ))}
+        </div>
       </div>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 py-8 gap-6 mx-4">
-        {products.map((item) => (
-          <ProductItem key={item.id} item={item} />
-        ))}
-      </div>
-    </div>
+    </>
   );
 }
