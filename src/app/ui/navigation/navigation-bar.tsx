@@ -12,11 +12,7 @@ import { NavLinks } from "@/app/ui/navigation/nav-links";
 import { NavMenuLinks } from "@/app/ui/navigation/nav-menu-links";
 import Image from "next/image";
 import { useState } from "react";
-
-interface NavItemProps {
-  name: string;
-  path: string;
-}
+import { NavItemProps } from "@/app/interface/navigation";
 
 const navItems: NavItemProps[] = [
   {
