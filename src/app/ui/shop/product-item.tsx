@@ -23,7 +23,7 @@ export const ProductItem: React.FC<ProductItemProps> = ({ item }) => {
             <p className="text-gray-600">{item.description}</p>
           </div>
           <p className="font-bold text-lg">Rp {item.price.toLocaleString()}</p>
-          <Link href={`/shop/${item.id}`}>
+          <Link href={`/shop/${item.id}`} className="w-full">
             <Button
               size="md"
               className="w-full rounded-md bg-dark text-white hover:bg-accent"
