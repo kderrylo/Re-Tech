@@ -18,13 +18,13 @@ async function fetchProduct(id: string) {
 export default async function ProductPage({ params }: { params: { id: string } }) {
   const product = await fetchProduct(params.id);
 
-	if(!product) return notFound();
+  if (!product) return notFound();
 
   return (
     <>
       <div className="min-h-screen">
-			<ProductDetail product={product} />
-		</div>
+        <ProductDetail product={product} />
+      </div>
     </>
   );
 }
