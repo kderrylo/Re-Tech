@@ -20,21 +20,21 @@ export const ProductDetail: React.FC<ProductDetailProps> = ({ product }) => {
             Back
           </Button>
         </Link>
-        <div className="md:flex justify-between gap-10 w-full">
-          <div className="item-left">
-            <Image
-              src={product.imageUrl}
-              alt={product.name}
-              className="w-full h-80 object-cover mb-4"
-            />
-          </div>
+        <div className="md:grid md:grid-cols-2 gap-10 w-full">
+          <Image
+            src={product.imageUrl}
+            alt={product.name}
+            className="w-full md:w-[30rem] h-96 aspect-square object-cover mb-4"
+          />
           <div className="flex flex-col gap-4">
             <h1 className="text-3xl font-bold">{product.name}</h1>
             <p className="text-lg text">{product.description}</p>
             <p className="text-2xl font-bold">
               Rp {product.price.toLocaleString()}
             </p>
-            <Button className="text-lg bg-dark hover:bg-dark/80">Buy Now</Button>
+            <Button className="text-lg bg-dark hover:bg-dark/80">
+              Buy Now
+            </Button>
           </div>
         </div>
         <Accordion
