@@ -15,7 +15,7 @@ export const Hero = () => {
           <div className="w-full flex justify-center gap-6 mt-6">
             <Link href={"/shop"}>
               <Button
-                className="text-white hover:border-white border-dark_ border-3 px-8 py-5"
+                className="text-white hover:border-white border-dark_ border-3 px-8 py-7"
                 size="lg"
                 variant="bordered"
                 radius="none"
@@ -25,7 +25,7 @@ export const Hero = () => {
             </Link>
             <Link href={"/contact"}>
               <Button
-                className="text-white hover:border-white border-dark_ border-3 px-8 py-5"
+                className="text-white hover:border-white border-dark_ border-3 px-8 py-7"
                 size="lg"
                 variant="bordered"
                 radius="none"
