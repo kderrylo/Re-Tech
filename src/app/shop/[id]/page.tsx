@@ -7,8 +7,8 @@ async function fetchProduct(id: string) {
   const response = await fetch(`${url}/api/products`);
 
   if (!response.ok) {
-    const errorData = await response.json();
-    throw new Error(`Fetch Failed! Status: ${response.status} - ${response.statusText}. Message: ${errorData.message || 'Unknown error'}`);
+    const errorData = await response.text();
+    throw new Error(`Fetch Failed! Status: ${response.status} - ${response.statusText}. Message: ${errorData || 'Unknown error'}`);
   }
 
   const products: ProductItemProps[] = await response.json();
