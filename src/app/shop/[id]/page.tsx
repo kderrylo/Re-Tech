@@ -1,28 +1,32 @@
+"use client";
+
 import { notFound } from "next/navigation";
 import { ProductItemProps } from "@/app/interface/product";
 import { ProductDetail } from "@/app/ui/shop/product-detail";
+import { useEffect, useState } from "react";
 
-async function fetchProduct(id: string) {
-  const url = process.env.NEXT_APP_URL;
-  const response = await fetch(`${url}/api/products`);
-
-  if (!response.ok) {
-    throw new Error("Fetch Failed!");
-  }
-
-  const products: ProductItemProps[] = await response.json();
-  const product = products.find((p) => p.id === parseInt(id));
-  return product;
-}
-
-export default async function ProductPage({
+export default function ProductPage({
   params,
 }: {
   params: { id: string };
 }) {
-  const product = await fetchProduct(params.id);
+  const [product, setProduct] = useState<ProductItemProps | null>(null);
+  useEffect(() => {
+    const fetchProduct = async () => {
+      const response = await fetch(`/api/products`);
+      const products: ProductItemProps[] = await response.json();
+      const selectedProduct = products.find(
+        (p) => p.id === parseInt(params.id)
+      );
 
-  if (!product) return notFound();
+      if(!selectedProduct) return notFound();
+
+      setProduct(selectedProduct || null);
+    };
+    fetchProduct();
+  }, [params.id]);
+
+  if (!product) return <div>Not Found</div>;
 
   return (
     <>
