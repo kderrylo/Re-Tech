@@ -30,8 +30,10 @@ export default function ProductPage({
 
   return (
     <>
-      <div className="min-h-screen bg-dark_">
-        <ProductDetail product={product} />
+      <div className="min-h-screen">
+        <div className="max-w-5xl mx-auto px-4">
+          <ProductDetail product={product} />
+        </div>
       </div>
     </>
   );
