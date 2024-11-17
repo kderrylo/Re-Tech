@@ -1,24 +1,23 @@
+"use client";
+
 import { notFound } from "next/navigation";
 import { ProductItem } from "@/app/ui/shop/product-item";
 import { ProductsProps } from "@/app/interface/shop";
+import { useEffect, useState } from "react";
 
-async function fetchProducts() {
-  const url = process.env.NEXT_PUBLIC_APP_URL;
-  const response = await fetch(`${url}/api/products`);
+export default function ShopPage() {
+  const [products, setProducts] = useState<ProductsProps[] | null>(null);
+  useEffect(() => {
+    const fetchProduct = async () => {
+      const response = await fetch(`/api/products`);
+      const products: ProductsProps[] = await response.json();
 
-  if (!response.ok) {
-    const errorData = await response.text();
-    throw new Error(`Fetch Failed! Status: ${response.status} - ${response.statusText}. Message: ${errorData || 'Unknown error'}`);
-  }
+      setProducts(products || null);
+    };
+    fetchProduct();
+  }, []);
 
-  const products: ProductsProps[] = await response.json();
-  return products;
-}
-
-export default async function ShopPage() {
-  const products = await fetchProducts();
-
-  if (!products) return notFound();
+  if (!products) return <div>Not Found</div>;
 
   return (
     <>
