@@ -3,11 +3,12 @@ import { ProductItemProps } from "@/app/interface/product";
 import { ProductDetail } from "@/app/ui/shop/product-detail";
 
 async function fetchProduct(id: string) {
-  const url = process.env.NEXT_APP_URL;
+  const url = process.env.NEXT_PUBLIC_APP_URL;
   const response = await fetch(`${url}/api/products`);
 
   if (!response.ok) {
-    throw new Error("Fetch Failed!");
+    const errorData = await response.json();
+    throw new Error(`Fetch Failed! Status: ${response.status} - ${response.statusText}. Message: ${errorData.message || 'Unknown error'}`);
   }
 
   const products: ProductItemProps[] = await response.json();
