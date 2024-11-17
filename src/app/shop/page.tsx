@@ -12,6 +12,8 @@ export default function ShopPage() {
       const response = await fetch(`/api/products`);
       const products: ProductsProps[] = await response.json();
 
+      if(!products) return notFound();
+
       setProducts(products || null);
     };
     fetchProduct();

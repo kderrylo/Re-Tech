@@ -18,6 +18,9 @@ export default function ProductPage({
       const selectedProduct = products.find(
         (p) => p.id === parseInt(params.id)
       );
+
+      if(!selectedProduct) return notFound();
+
       setProduct(selectedProduct || null);
     };
     fetchProduct();
