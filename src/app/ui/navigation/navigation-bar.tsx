@@ -36,7 +36,7 @@ export default function NavigationBar() {
     <>
       <Navbar
         id="navbar"
-        className="fixed lg:bg-transparent bg-dark border-b py-2 lg:py-4 transition-all shadow-md text-accent z-50"
+        className="fixed bg-dark border-b py-2 lg:py-4 transition-all shadow-md text-accent z-50"
         onMenuOpenChange={setIsMenuOpen}
       >
         <NavbarContent>
