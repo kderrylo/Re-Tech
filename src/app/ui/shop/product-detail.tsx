@@ -9,7 +9,7 @@ import {
 } from "@/components/ui/accordion";
 // import { Button } from "@/components/ui/button";
 import { ChevronLeft } from "lucide-react";
-import { Modal, ModalContent, ModalHeader, ModalBody, ModalFooter, Button, useDisclosure } from "@nextui-org/react";
+import { Modal, ModalContent, ModalHeader, ModalBody, Button, useDisclosure } from "@nextui-org/react";
 
 
 export const ProductDetail: React.FC<ProductDetailProps> = ({ product }) => {
