@@ -163,7 +163,7 @@ export default function ContactPage() {
 
                     {/* Address */}
                     <div className="flex flex-row items-center gap-2">
-                      <img src="public/assetscontact/location.png" className="w-4 h-4" />
+                      <img src="/assetscontact/location.png" className="w-4 h-4" />
                       <p className="text-black text-xs sm:text-base">
                         Bina Nusantara University Jl. Raya Kb. Jeruk No.27, RT.1/RW.9, Kemanggisan, Kec. Palmerah, Kota Jakarta Barat, Daerah Khusus Ibukota Jakarta 11530
                       </p>
@@ -171,19 +171,19 @@ export default function ContactPage() {
 
                     {/* Email */}
                     <div className="flex flex-row items-center gap-2">
-                      <img src="public/assetscontact/email.png" className="w-4 h-4" />
+                      <img src="/assetscontact/email.png" className="w-4 h-4" />
                       <p className="text-black text-xs sm:text-base">retechentre@gmail.com</p>
                     </div>
 
                     {/* Phone */}
                     <div className="flex flex-row items-center gap-2">
-                      <img src="public/assetscontact/wa.png" className="w-4 h-4" />
+                      <img src="/assetscontact/wa.png" className="w-4 h-4" />
                       <p className="text-black text-xs sm:text-base">(+62) 0822-9987-9929</p>
                     </div>
 
                     {/* Instagram */}
                     <div className="flex flex-row items-center gap-2">
-                      <img src="public/assetscontact/ig.png" className="w-4 h-4" />
+                      <img src="/assetscontact/ig.png" className="w-4 h-4" />
                       <p className="text-black text-xs sm:text-base">@retech.eco</p>
                     </div>
                   </div>
