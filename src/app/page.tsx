@@ -10,7 +10,6 @@ export default function Home() {
       <div className="bg-navbar text-light">
         <Hero />
         <Sell />
-        {/* <Shop /> */}
         <About />
       </div>
     </>

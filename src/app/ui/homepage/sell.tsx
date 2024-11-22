@@ -4,7 +4,7 @@ import Link from "next/link";
 export const Sell = () => {
     return (
         <>
-            <div className="grid grid-cols-2 grid-rows-2 gap-0 h-[400px]">
+            <div className="grid grid-cols-2 grid-rows-2 gap-0 h-[800px]">
                 {/* Left Column: Title with Image Background */}
                 <div className="relative flex-1 flex items-center justify-center text-center bg-[url('/bg-contact.png')] bg-cover bg-center">
                     <h3 className="relative z-10 text-neutral-white font-bold text-4xl md:text-5xl">
