@@ -23,6 +23,9 @@ const navItems: NavItemProps[] = [
     name: "SHOP",
     path: "/shop",
   },
+  { name: "SELL",
+    path: "https://wa.me/62082299879929?text=Hi%20Retech!%20I%20want%20to%20sell%20my%20products,%20here's%20the%20details:%0A-Product%20Name%0A-Product%20Type%0A-Conditions%0A-Sell/Throw%0A-Photos%0A-Additional%20Info",
+  },
   {
     name: "CONTACT",
     path: "/contact",

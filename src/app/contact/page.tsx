@@ -6,13 +6,8 @@ interface FormData {
   name: string;
   email: string;
   phone: string;
-  address: string;
-  deviceType: string;
-  condition: string;
-  action: string;
   message: string;
   additionalInfo: string;
-  photos: File[];
 }
 
 export default function ContactPage() {
@@ -20,13 +15,8 @@ export default function ContactPage() {
     name: "",
     email: "",
     phone: "",
-    address: "",
-    deviceType: "",
-    condition: "",
-    action: "",
     message: "",
     additionalInfo: "",
-    photos: [],
   });
 
   const handleChange = (
@@ -38,14 +28,14 @@ export default function ContactPage() {
     });
   };
 
-  const handlePhotoUpload = (e: ChangeEvent<HTMLInputElement>) => {
-    if (e.target.files) {
-      setFormData({
-        ...formData,
-        photos: Array.from(e.target.files),
-      });
-    }
-  };
+  // const handlePhotoUpload = (e: ChangeEvent<HTMLInputElement>) => {
+  //   if (e.target.files) {
+  //     setFormData({
+  //       ...formData,
+  //       photos: Array.from(e.target.files),
+  //     });
+  //   }
+  // };
 
   // const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
   //     e.preventDefault();
@@ -126,127 +116,17 @@ export default function ContactPage() {
                       onChange={handleChange}
                     />
                   </div>
-
-                  {/* Alamat */}
-                  <div className="flex flex-col">
-                    <label
-                      htmlFor="address"
-                      className="text-lg text-dark font-semibold mb-2"
-                    >
-                      Alamat Penjemputan:
-                    </label>
-                    <input
-                      id="address"
-                      type="text"
-                      placeholder="Alamat Penjemputan"
-                      className="p-3 border border-neutral-300 rounded-lg"
-                      required
-                      value={formData.address}
-                      onChange={handleChange}
-                    />
-                  </div>
-
-                  {/* Jenis Barang Elektronik */}
-                  <div className="flex flex-col">
-                    <label
-                      htmlFor="deviceType"
-                      className="text-lg text-dark  font-semibold mb-2"
-                    >
-                      Jenis Barang Elektronik:
-                    </label>
-                    <select
-                      id="deviceType"
-                      className="p-3 border border-neutral-300 rounded-lg"
-                      required
-                      value={formData.deviceType}
-                      onChange={handleChange}
-                    >
-                      <option value="">Pilih Jenis Barang</option>
-                      <option value="Laptop">Laptop</option>
-                      <option value="Smartphone">Smartphone</option>
-                      <option value="Tablet">Tablet</option>
-                      <option value="Monitor">Monitor</option>
-                      <option value="Printer">Printer</option>
-                      <option value="Other">Lainnya</option>
-                    </select>
-                  </div>
-
-                  {/* Kondisi Barang */}
-                  <div className="flex flex-col">
-                    <label
-                      htmlFor="condition"
-                      className="text-lg text-dark font-semibold mb-2"
-                    >
-                      Kondisi Barang:
-                    </label>
-                    <select
-                      id="condition"
-                      className="p-3 border border-neutral-300 rounded-lg"
-                      required
-                      value={formData.condition}
-                      onChange={handleChange}
-                    >
-                      <option value="">Pilih Kondisi</option>
-                      <option value="Fully Functional">Berfungsi Penuh</option>
-                      <option value="Partially Functional">
-                        Berfungsi Sebagian
-                      </option>
-                      <option value="Not Working">Tidak Berfungsi</option>
-                      <option value="Unknown Condition">
-                        Kondisi Tidak Diketahui
-                      </option>
-                    </select>
-                  </div>
-
-                  {/* Menjual atau Membuang */}
-                  <div className="flex flex-col">
-                    <label
-                      htmlFor="action"
-                      className="text-lg text-dark font-semibold mb-2"
-                    >
-                      Apakah Anda Ingin Menjual atau Membuang Barang Ini?
-                    </label>
-                    <select
-                      id="action"
-                      className="p-3 border border-neutral-300 rounded-lg"
-                      required
-                      value={formData.action}
-                      onChange={handleChange}
-                    >
-                      <option value="">Pilih Aksi</option>
-                      <option value="Sell">Jual</option>
-                      <option value="Dispose">Buang</option>
-                    </select>
-                  </div>
-
-                  {/* Upload Foto */}
-                  <div className="flex flex-col">
-                    <label
-                      htmlFor="photo"
-                      className="text-lg text-dark font-semibold mb-2"
-                    >
-                      Unggah Foto Barang Elektronik:
-                    </label>
-                    <input
-                      id="photo"
-                      type="file"
-                      className="p-3 border border-neutral-300 rounded-lg"
-                      onChange={handlePhotoUpload}
-                      multiple
-                    />
-                  </div>
-
                   {/* Informasi Tambahan */}
                   <div className="flex flex-col">
                     <label
                       htmlFor="additionalInfo"
                       className="text-lg text-dark font-semibold mb-2"
                     >
-                      Informasi Tambahan:
+                      Pesan:
                     </label>
                     <textarea
                       id="additionalInfo"
-                      placeholder="Tambahkan detail tentang perangkat (tahun, model, masalah, dll)"
+                      placeholder="Tulis Pesan"
                       className="p-3 border border-neutral-300 rounded-lg"
                       rows={4}
                       value={formData.additionalInfo}
@@ -264,15 +144,49 @@ export default function ContactPage() {
                 </form>
               </div>
               <div className="flex-1">
-                <div className="w-full h-[400px]">
-                  <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d63463.49603881283!2d106.71015692167968!3d-6.201758500000002!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f6dcc7d2c4ad%3A0x209cb1eef39be168!2sUniversitas%20Bina%20Nusantara%20Kampus%20Anggrek!5e0!3m2!1sid!2sid!4v1728532320243!5m2!1sid!2sid"
-                    width="100%"
-                    height="100%"
-                    style={{ border: 0 }}
-                    allowFullScreen
-                    loading="lazy"
-                  />
+                <div className="flex flex-col items-start">
+                  {/* Title */}
+                  <p className="text-lg text-dark font-semibold mb-2">Our Address</p>
+
+                  {/* Description */}
+                  <div className="flex flex-col gap-4 items-start">
+                    <div className="w-full h-[250px]">
+                      <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d63463.49603881283!2d106.71015692167968!3d-6.201758500000002!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f6dcc7d2c4ad%3A0x209cb1eef39be168!2sUniversitas%20Bina%20Nusantara%20Kampus%20Anggrek!5e0!3m2!1sid!2sid!4v1728532320243!5m2!1sid!2sid"
+                        width="100%"
+                        height="100%"
+                        style={{ border: 0 }}
+                        allowFullScreen
+                        loading="lazy"
+                      />
+                    </div>
+
+                    {/* Address */}
+                    <div className="flex flex-row items-center gap-4">
+                      <img src="/assetscontact/location.png" className="w-6 h-4" />
+                      <p className="text-black text-xs sm:text-base">
+                        Bina Nusantara University Jl. Raya Kb. Jeruk No.27, RT.1/RW.9, Kemanggisan, Kec. Palmerah, Kota Jakarta Barat, Daerah Khusus Ibukota Jakarta 11530
+                      </p>
+                    </div>
+
+                    {/* Email */}
+                    <div className="flex flex-row items-center gap-4">
+                      <img src="/assetscontact/email.png" className="w-6 h-4" />
+                      <p className="text-black text-xs sm:text-base">retechentre@gmail.com</p>
+                    </div>
+
+                    {/* Phone */}
+                    <div className="flex flex-row items-center gap-4">
+                      <img src="/assetscontact/wa.png" className="w-6 h-4" />
+                      <p className="text-black text-xs sm:text-base">(+62) 822-9987-9929</p>
+                    </div>
+
+                    {/* Instagram */}
+                    <div className="flex flex-row items-center gap-4">
+                      <img src="/assetscontact/ig.png" className="w-6 h-4" />
+                      <p className="text-black text-xs sm:text-base">@retech.eco</p>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
