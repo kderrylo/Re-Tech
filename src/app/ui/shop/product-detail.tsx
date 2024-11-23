@@ -17,9 +17,11 @@ import {
   useDisclosure,
   ModalFooter
 } from "@nextui-org/react";
+import { useToast } from "@/hooks/use-toast"
 
 export const ProductDetail: React.FC<ProductDetailProps> = ({ product }) => {
   const { isOpen, onOpen, onOpenChange } = useDisclosure();
+  const { toast } = useToast();
   const paymentMethods = [
     { name: "Visa", image: "/assestsShop/visa-img.png" },
     { name: "Go-Pay", image: "/assestsShop/gopay-img.jpg" },
@@ -73,9 +75,11 @@ export const ProductDetail: React.FC<ProductDetailProps> = ({ product }) => {
                             key={index}
                             className="flex flex-col items-center p-2 border rounded-lg hover:bg-gray-100"
                             onClick={() => {
-                              alert(
-                                `Your ${method.name} payment is SUCCESS ! `
-                              );
+                              toast({
+                                title: "Success",
+                                description: `Your ${method.name} payment is SUCCESS ! `,
+                                variant: "success",
+                              });
                               onClose();
                             }}
                           >
