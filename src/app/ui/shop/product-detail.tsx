@@ -15,6 +15,7 @@ import {
   ModalBody,
   Button,
   useDisclosure,
+  ModalFooter
 } from "@nextui-org/react";
 
 export const ProductDetail: React.FC<ProductDetailProps> = ({ product }) => {
@@ -90,6 +91,7 @@ export const ProductDetail: React.FC<ProductDetailProps> = ({ product }) => {
                         ))}
                       </div>
                     </ModalBody>
+                    <ModalFooter></ModalFooter>
                   </>
                 )}
               </ModalContent>
