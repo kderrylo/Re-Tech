@@ -4,6 +4,7 @@ import "./globals.css";
 import { NextUIProvider } from "@nextui-org/react";
 import NavigationBar from "@/app/ui/navigation/navigation-bar";
 import { Footer } from "@/app/ui/footer";
+import { Toaster } from "@/components/ui/toaster"
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -34,6 +35,7 @@ export default function RootLayout({
         <NavigationBar />
         <NextUIProvider>
           {children}
+          <Toaster />
         </NextUIProvider>
         <Footer />
       </body>
